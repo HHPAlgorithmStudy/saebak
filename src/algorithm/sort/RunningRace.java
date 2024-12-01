@@ -1,9 +1,6 @@
 package algorithm.sort;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.IntStream;
 
 /**
@@ -46,7 +43,7 @@ public class RunningRace {
         String[] answer = {};
 
         // 추가, 삭제가 용이한 LinkedList 사용
-        LinkedList<String> playerList = new LinkedList<>(Arrays.asList(players));
+        List<String> playerList = new LinkedList<>(Arrays.asList(players));
         int index = -1;
         String temp = null;
 
@@ -73,7 +70,7 @@ public class RunningRace {
         String[] answer = {};
 
         // 배열을 LinkedList로 변환
-        LinkedList<String> playerList = new LinkedList<>(Arrays.asList(players));
+        List<String> playerList = new ArrayList<>(Arrays.asList(players));
         // 플레이어 이름과 인덱스를 매핑하는 HashMap 생성
         Map<String, Integer> playerIndexMap = new HashMap<>();
         for (int i = 0; i < players.length; i++) {
